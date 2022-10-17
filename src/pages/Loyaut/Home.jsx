@@ -1,21 +1,21 @@
-import { moviesFetch } from 'Api/Api';
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+// import { moviesFetch } from 'Api/Api';
+// import { useState, useEffect } from 'react';
+// import { useLocation } from 'react-router-dom';
 
 export const HomePage = () => {
-  const [trendingFilms, setTrendingFilms] = useState([]);
-  const location = useLocation();
-  console.log(location);
+  //   const [trendingFilms, setTrendingFilms] = useState([]);
+  //   const location = useLocation();
+  //   console.log(location);
 
-  useEffect(() => {
-    moviesFetch()
-      .then(res => {
-        setTrendingFilms(res.results);
-      })
-      .catch(err => {
-        console.log(err.message);
-      });
-  }, []);
+  //   useEffect(() => {
+  //     moviesFetch()
+  //       .then(res => {
+  //         setTrendingFilms(res.results);
+  //       })
+  //       .catch(err => {
+  //         console.log(err.message);
+  //       });
+  //   }, []);
 
   //   const fetchMovie = () => {
   //     const response = moviesFetch();
