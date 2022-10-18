@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapperTitle {
+    display: flex;
+    gap: 20px;
+}
+
+.wrapperDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+}
+
+.error {
+    color: black;
+    text-align: center;
+    font-size: xx-large;
+    
+}
+
