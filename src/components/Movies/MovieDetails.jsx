@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 import css from './Movies.module.css';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { moviesId } = useParams();
   const location = useLocation();
   const from = location.state?.from ?? '/';
@@ -64,3 +64,5 @@ export const MovieDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;

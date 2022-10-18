@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { searchMoviesByName } from 'Api/Api';
 
-export const Movies = () => {
+const Movies = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -38,3 +38,5 @@ export const Movies = () => {
     </div>
   );
 };
+
+export default Movies;

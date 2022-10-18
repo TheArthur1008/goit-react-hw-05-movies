@@ -1,9 +1,9 @@
 import { searchMovieByReviews } from 'Api/Api';
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import css from './Reviews.module.css';
 
-export const Reviews = () => {
+const Reviews = () => {
   const { moviesId } = useParams();
   const [reviews, setReviews] = useState([]);
 
@@ -34,3 +34,5 @@ export const Reviews = () => {
     </>
   );
 };
+
+export default Reviews;

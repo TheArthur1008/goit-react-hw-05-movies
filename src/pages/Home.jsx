@@ -3,7 +3,7 @@ import { MoviesList } from 'components/Movies/MoviesList';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export const HomePage = () => {
+const Home = () => {
   const [trendingFilms, setTrendingFilms] = useState([]);
   const location = useLocation();
 
@@ -27,3 +27,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
+export default Home;
