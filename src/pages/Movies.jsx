@@ -31,6 +31,7 @@ const Movies = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
+          placeholder="Enter your query here, please"
           onChange={element => setSearchQuery(element.target.value)}
           className={css.input}
         />
