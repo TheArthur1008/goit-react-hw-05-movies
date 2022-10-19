@@ -31,7 +31,9 @@ const MovieDetails = () => {
     movieById;
   return (
     <div className={css.wrapper}>
-      <Link to="/">Go back</Link>
+      <Link to="/" className={css.link}>
+        Go back
+      </Link>
       <div className={css.wrapperTitle}>
         <img
           src={`https://image.tmdb.org/t/p/w500${poster_path}`}
@@ -52,10 +54,10 @@ const MovieDetails = () => {
       </div>
       <div className={css.wrapper}>
         <div className={css.wrapperTitle}>
-          <NavLink to="cast" state={{ from: from }}>
+          <NavLink to="cast" state={{ from: from }} className={css.link}>
             Cast
           </NavLink>
-          <NavLink to="reviews" state={{ from: from }}>
+          <NavLink to="reviews" state={{ from: from }} className={css.link}>
             Reviews
           </NavLink>
         </div>

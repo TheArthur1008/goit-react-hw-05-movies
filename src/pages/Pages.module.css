@@ -1,0 +1,38 @@
+.input {
+  min-width: 300px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 2px solid #2d2e2f;
+  border-radius: 5px;
+}
+
+.input:hover,
+.input:focus {
+  box-shadow: 0px 0px 33px -10px rgba(36, 36, 37, 0.64);
+}
+
+.button {
+  min-width: 150px;
+  margin-left: 20px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 2px solid #2d2e2f;
+  border-radius: 5px;
+  background-color: #2d2e2f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0px 0px 33px -10px rgba(36, 36, 37, 0.64);
+  color: red;
+}
+
+.wrapperTitle {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
