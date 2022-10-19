@@ -1,5 +1,5 @@
 import { searchMovieById } from 'Api/Api';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import {
   Link,
   NavLink,
@@ -12,6 +12,7 @@ import css from './Movies.module.css';
 const MovieDetails = () => {
   const { moviesId } = useParams();
   const location = useLocation();
+  const refLocation = useRef(location.state?.location);
   const from = location.state?.from ?? '/';
   const [movieById, setMovieById] = useState();
   useEffect(() => {
@@ -31,7 +32,7 @@ const MovieDetails = () => {
     movieById;
   return (
     <div className={css.wrapper}>
-      <Link to="/" className={css.link}>
+      <Link to={refLocation.current ?? '/'} className={css.link}>
         Go back
       </Link>
       <div className={css.wrapperTitle}>

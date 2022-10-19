@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import css from './Movies.module.css';
 import PropTypes from 'prop-types';
-export const MoviesList = ({ movies, from }) => {
+export const MoviesList = ({ movies }) => {
+  const location = useLocation();
   return (
     <ul className={css.list}>
       {movies &&
@@ -9,7 +10,7 @@ export const MoviesList = ({ movies, from }) => {
           <li key={id} className={css.item}>
             <Link
               to={`/movies/${id}`}
-              state={{ from: from }}
+              state={{ location }}
               className={css.link}
             >
               <img
@@ -27,7 +28,6 @@ export const MoviesList = ({ movies, from }) => {
 };
 
 MoviesList.propTypes = {
-  from: PropTypes.string,
   movies: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
