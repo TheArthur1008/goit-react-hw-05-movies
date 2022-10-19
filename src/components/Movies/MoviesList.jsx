@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import css from './Movies.module.css';
+import PropTypes from 'prop-types';
 export const MoviesList = ({ movies, from }) => {
   return (
     <ul className={css.list}>
@@ -23,4 +24,16 @@ export const MoviesList = ({ movies, from }) => {
         ))}
     </ul>
   );
+};
+
+MoviesList.propTypes = {
+  from: PropTypes.string,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      title: PropTypes.string,
+      poster_path: PropTypes.string,
+    })
+  ),
 };
